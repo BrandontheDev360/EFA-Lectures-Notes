@@ -1,0 +1,113 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+    background-color: #ff4821;
+    box-shadow: 2px 2px 2px #8f8f8f;
+}
+
+nav ul {
+    display: inline-flex;
+    /* margin: 20px */
+}
+
+nav ul li {
+    padding: 20px;
+    list-style-type: none;
+}
+
+#nav-links {
+    color: white;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links:hover {
+    text-decoration: none;
+    color: #525252;
+}
+
+header h1 {
+    padding-top: 50px;
+    background-color: #f0f0f0;
+    font-size: 220px;
+}
+
+#html {
+    background-color: #ff4821;
+    padding: 1em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+section h2 {
+    text-align: left;
+}
+
+#html5-picture {
+    float: right;
+}
+
+.paragraphs {
+    text-align: left;
+}
+
+#css {
+    background-color: #f0f0f0;
+    padding: 1em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+#css3-picture {
+    /* float: right; */
+    justify-content: space-evenly;
+    width: 10em;
+    height: 10em;
+}
+
+.css-paragraph {
+    display: flex;
+    align-items: center;
+}
+
+#contact-form {
+    background-color: #525252;
+    padding: 1em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+form.form-example {
+    display: table;
+}
+
+div.form-example {
+    display: table-row;
+}
+
+label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.my-footer {
+    background-color: #ff4821;
+    padding: 3em;
+}
+
+footer h5 {
+    text-align: center;
+}
