@@ -121,11 +121,11 @@ for (let i = 0; i <= 10; i++) {
   console.log(`${propCase}: "Engage!"`);
   
   /*
-  1) We are taking the value of the "n" index and declaring a position of 0
-  2) We assign our empty variable top equal that positioned value.
-  3) If that index is 0, we will take that value and run a ".toUpperCase()" method on it.
-  4) If the index is NOT 0, we still want to include it into our empty variable and utilize our += expression so it knows to add the next value (or n++).
-  5) If the index is NOT 0, we want to run a ".toLowerCase()" method so that all letters are in the proper case.
+  1. We are taking the value of the "n" index and declaring a position of 0
+  2. We assign our empty variable top equal that positioned value.
+  3. If that index is 0, we will take that value and run a ".toUpperCase()" method on it.
+  4. If the index is NOT 0, we still want to include it into our empty variable and utilize our += expression so it knows to add the next value (or n++).
+  5. If the index is NOT 0, we want to run a ".toLowerCase()" method so that all letters are in the proper case.
   */
   
   /*
@@ -200,3 +200,32 @@ for (let i = 0; i <= 10; i++) {
   } else {
     console.log(num);
   }
+
+  // While Loops 
+
+/*
+  While loop executes a statement insde of a code block provided the while condition continues to evaluate to true.
+  The condition is evaluated before executing the statement.
+*/
+// i++= code runs 0-100 from i--= code runs 100-0
+let randInt = 32
+
+while (randInt < 0) {
+  randInt = randInt -1 // randInt --
+  console.log(randInt)
+}
+
+// while (true) {
+// do something until while (false)
+// }
+
+// Pandora's Box. An infinite loop. While will never evaluate to false and will not stop. EVER!
+
+let iterable = 0
+
+while(iterable <= 100) {
+  iterable++
+  if (iterable % 2 === 0) {
+    console.log(`${iterable} is divisible by 2`)
+  }
+}
