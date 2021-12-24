@@ -2,8 +2,8 @@ require("dotenv").config()
 const Express = require("express")
 const app = Express()
 const dbConnection = require("./db")
-
 const controllers = require("./controllers")
+const middlewares = require("./middleware")
 
 
 /*
@@ -14,8 +14,10 @@ const controllers = require("./controllers")
         - logic handling (controller)
     - Allows developers to seprate the concerns of an application.
 */
-
-app.use("/pies", controllers.piecontroller)
+app.use(middlewares.CORS)
+app.use(Express.json())
+app.use("/pies", middlewares.validateSession, controllers.piecontroller)
+app.use("/user", controllers.usercontroller)
 
 dbConnection.authenticate()
 .then(() => {
@@ -23,11 +25,10 @@ dbConnection.authenticate()
 })
 .then(() => {
     app.listen(process.env.PORT, () => {
-        console.log(`[Server] listening on port ${process.env.PORT}`)
+        console.log(`[server] listening on port ${process.env.PORT}`)
     })
 })
 .catch((err) => {
-    console.log(`[Server] crashed`)
+    console.log(`[server] crashed`)
     console.log(err)
 })
-
